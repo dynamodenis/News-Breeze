@@ -1,6 +1,6 @@
 from app import app
 import urllib.request,json
-from models import Source
+from .models import Source
 
 
 #import API key
@@ -17,10 +17,27 @@ def get_source():
         unread_data=url.read()
         read_json=json.loads(unread_data)
 
-        source_results=[]
+        source_results=None
 
         if read_json['sources']:
             sources_list=read_json['sources']
             source_results=process_results(sources_list)
 
-        return source_results
+    return source_results
+
+
+def process_results(source_list):
+    source_results=[]
+
+    for sources in source_list:
+        id=sources.get('id')
+        name=sources.get('name')
+        description=sources.get('description')
+        url=sources.get('url')
+        
+
+        new_source=Source(id,name,description,url)
+        source_results.append(new_source)
+
+    return source_results
+
