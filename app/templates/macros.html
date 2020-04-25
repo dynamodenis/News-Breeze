@@ -8,7 +8,7 @@
                 <img  src="{{source.urlToImage}}" alt="" class="img-responsive">
                 <div class="card-body">
                     <h4 class="card-title">
-                    <a href="{{source.url}}">{{source.title}}</a>
+                    <a href="{{source.url}}" target="_blank">{{source.title}}</a>
                     </h4>
                     <p class="card-text">{{source.description}}</p>
                     <p>Posted from:<span class="label label-primary">{{source.source['name']}}</span>  <span></span> Posted At:<span class="label label-danger">{{source.publishedAt}}</span></p>
@@ -19,5 +19,10 @@
     {% endfor %}
 {% endmacro%}
 
+{% macro getSources(source_list) %}
+    {% for source in source_list %}
+        <a href="{{source.url}}" target="_blank">{{source.name}}</a>
+    {% endfor%}
+{% endmacro %}
 
 

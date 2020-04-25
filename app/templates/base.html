@@ -1,4 +1,5 @@
 {% extends 'bootstrap/base.html'%}
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +23,19 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/sources">New Sources</a></li>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      News Sources
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li>{{macro.getSources(sources)}}</li>
+                    </div>
+                </div>
+                <li><a href="/sports">Sports</a></li>
         </div>
-
-    </div> 
+    </div>
+     
 </div>  
 {% endblock%}
 
