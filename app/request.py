@@ -9,6 +9,7 @@ api_key=app.config['API_KEY']
 #import urls
 highlights_url=app.config['HEADLINES_API_URL']
 sources_url=app.config['SOURCE_API_URL']
+search_url=app.config['SEARCH_SOURCES']
 
 def get_source():
     source_api_url=sources_url.format(api_key)
@@ -75,6 +76,21 @@ def process_article(articles_list):
 
     return articles_data
 
+
+def search_for_article(article):
+    search_article_url=search_url.format(article,api_key)
+
+    with urllib.request.urlopen(search_article_url) as url:
+        search_data=url.read()
+        search_json=json.loads(search_data)
+
+        search_article=None
+
+        if search_json['articles']:
+            searches=search_json['articles']
+            search_article=process_article(searches)
+
+    return search_article
 
 
 
