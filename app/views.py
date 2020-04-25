@@ -18,3 +18,9 @@ def sources():
     return render_template('sports.html',sports=sport)
 
 
+@app.route('/business')
+def business():
+    business=search_for_article('business')
+    return render_template('business.html',business=business)
+
+
