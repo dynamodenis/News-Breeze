@@ -68,8 +68,9 @@ def process_article(articles_list):
         publishedAt=article.get('publishedAt')
         url=article.get('url')
         title=article.get('title')
+        source=article.get('source')
 
-        new_article=Article(id,name,urlToImage,description,title,url,publishedAt)
+        new_article=Article(id,name,urlToImage,description,title,url,publishedAt,source)
         articles_data.append(new_article)
 
     return articles_data

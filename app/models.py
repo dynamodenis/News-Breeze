@@ -7,7 +7,7 @@ class Source:
 
 
 class Article:
-    def __init__(self,id,name,urlToImage,description,title,url,publishedAt):
+    def __init__(self,id,name,urlToImage,description,title,url,publishedAt,source):
         self.id=id
         self.name=name
         self.urlToImage=urlToImage
@@ -15,3 +15,4 @@ class Article:
         self.title=title
         self.url=url
         self.publishedAt=publishedAt
+        self.source=source

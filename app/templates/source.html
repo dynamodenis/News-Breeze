@@ -1,7 +1,9 @@
-<article>
+{% extends 'base.html'%}
+{% block content%}
     <ul>
     {% for source_list in source %}
         <li>{{source_list.name}}</li>
     {% endfor%}
     </ul>
-</article>
+
+{% endblock%}
