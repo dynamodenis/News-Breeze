@@ -1,10 +1,11 @@
 from app import app
 from flask import render_template
-from .request import get_source
+from .request import get_source,get_article
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    articles=get_article()
+    return render_template('index.html',articles=articles)
 
 
 
