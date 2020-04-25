@@ -6,38 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News | Breeze</title>
 </head>
-<body>
-<div>
-    {% block navbar%}
-    <div class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/"> News Breeze </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/sources">New Sources</a></li>
-            </div>
-    
+<body class="container">
+{% block navbar%}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"> News Breeze </a>
         </div>
-    </div>   
-    {% endblock%}
-</div>
-    {% block content %}
-    {% endblock%}
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sources">New Sources</a></li>
+        </div>
 
+    </div> 
+</div>  
+{% endblock%}
 
+{% block content %}
 
-
-
-
-
+{% endblock%}
 </body>
 </html>

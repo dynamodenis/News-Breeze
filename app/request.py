@@ -54,7 +54,7 @@ def get_article():
         if get_json_data['articles']:
             articles_list=get_json_data['articles']
             articles_data=process_article(articles_list)
-
+        
     return articles_data
 
 def process_article(articles_list):
@@ -69,7 +69,7 @@ def process_article(articles_list):
         url=article.get('url')
         title=article.get('title')
         source=article.get('source')
-
+        
         new_article=Article(id,name,urlToImage,description,title,url,publishedAt,source)
         articles_data.append(new_article)
 

@@ -1,7 +1,12 @@
 {% extends 'base.html'%}
+
 {% import 'macros.html' as macro %}
 
+
 {% block content%}
+<h1 class="my-4">Page Heading
+    <small class="bg-danger">Secondary Text</small>
+</h1>
 <ul>
    {{macro.displaySources(articles)}}
 </ul>
