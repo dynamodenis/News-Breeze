@@ -1,6 +1,8 @@
+
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 {% block content%}
+
 <div class="panel panel-success">
     <h1 class="my-4 panel-heading">Sports</h1>
 
@@ -8,39 +10,30 @@
     {{macro.displaySources(sports)}}
     </ul>
 </div>
-{% endblock%}
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">News Breeze</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/sports">Sports News</a>
-                <a class="nav-link" href="/business">Business News</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    News Sources
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
+<div class="container ">
+    <div class="row ">
+        <div class="col-md-6">
+            <ul class="list-group list-group-horizontal-xl icons bg-dark ">
+                <li class="icon-item"><a href="http://instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li class="icon-item"><a href="http://facebook.com" target="_blank" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                <li class="icon-item"><a href="http://twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="icon-item"><a href="http://github.com" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li class="icon-item"><a href="http://linkedin.com" target="_blank" title="Github"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
-    </nav>
+        <div class="col-md-6">
+            <footer class="page-footer font-small special-color-dark">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <p>Developed by: Dynamo Denis.</p>
+                    <p>Email: dmbugua66@gmail.com</p>
+                    <p>Location: Nairobi, Kenya.</p>
+                </div>
+                <!-- Copyright -->
+            
+            </footer>
+        </div>
+    </div>
 </div>
+{% endblock%}

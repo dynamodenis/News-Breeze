@@ -11,6 +11,7 @@
 {% block styles%}
     {{super()}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 {% endblock%}
 {% block navbar%}
 <div class="navbar navbar-inverse " role="navigation">
@@ -41,13 +42,13 @@
                 </li>
             </ul>
         </div>
-        <ul class="list-group list-group-horizontal-xl form-inline">
-            <li><a href="http://instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="http://facebook.com" target="_blank" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-            <li><a href="http://twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="http://github.com" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-            <li><a href="http://linkedin.com" target="_blank" title="Github"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        </ul>
+        <!-- <ul class="list-group list-group-horizontal-xl icons">
+            <li class="icon-item"><a href="http://instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li class="icon-item"><a href="http://facebook.com" target="_blank" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li class="icon-item"><a href="http://twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="icon-item"><a href="http://github.com" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li class="icon-item"><a href="http://linkedin.com" target="_blank" title="Github"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul> -->
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search News...." aria-label="Search" name="search_name">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -62,13 +63,6 @@
 
 
 {% endblock%}
-<div>
-    <footer class="container-fluid">
-        <p>Developed by: Dynamo Denis.</p>
-        <p>Email: dmbugua66@gmail.com</p>
-        <p>Location: Nairobi, Kenya.</p>
-        <p>&copy;2020</p>
-    </footer>
-</div>
+
 </body>
 </html>
