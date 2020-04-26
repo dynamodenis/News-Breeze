@@ -21,7 +21,7 @@
 
 {% macro getSources(source_list) %}
     {% for source in source_list %}
-        <a href="{{source.url}}" target="_blank">{{source.name}}</a>
+       <a class="dropdown-item" href="{{source.url}}" target="_blank">{{source.name}}</a>
     {% endfor%}
 {% endmacro %}
 

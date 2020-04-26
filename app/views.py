@@ -23,4 +23,11 @@ def business():
     business=search_for_article('business')
     return render_template('business.html',business=business)
 
+@app.route('/search/<artcle_name>')
+def search(artcle_name):
+    artcle_name_list=artcle_name.split(" ")
+    artcle_name_format="+".join(artcle_name_list)
+    searched_article=search_for_article(artcle_name_format)
+    title=f'{artcle_name}'
 
+    return render_template('search.html',title=title,article=searched_article)
