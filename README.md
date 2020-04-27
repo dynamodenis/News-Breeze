@@ -4,6 +4,7 @@ Developer: Dynamo Denis Mbugua
 
 Email: dmbugua66@gmail.com
 
+To run this site click [here](https://news-breeze.herokuapp.com/)
 Location: Nairobi, Kenya
 
 ---
