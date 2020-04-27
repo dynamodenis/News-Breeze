@@ -1,0 +1,2 @@
+export API_KEY=0f7ec6b12d4749948d4849793375585b
+python3.6 manage.py server

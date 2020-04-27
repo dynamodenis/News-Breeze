@@ -44,10 +44,14 @@ sudo easy_install pip
 ```
 - Open your editor and run the cloned repository and install the modules below to run effectivey.
 
+- To run the class test use the following commands in the terminal
+```
+python3.6 manage.py test
+```
 
 - Now your ready to run the modules type the fillowing commands to run the app locally.
 ```
-python3.6 manage.py
+./start.sh or python3.6 manage.py server
 ```
 
 ## Contribution

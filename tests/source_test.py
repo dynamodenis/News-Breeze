@@ -1,4 +1,4 @@
-from models import Source
+from app.models import Source
 import unittest
 
 class TestSource(unittest.TestCase):
@@ -8,5 +8,4 @@ class TestSource(unittest.TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source,Source))
 
-if __name__=='__main__':
-    unittest.main()
+

@@ -1,15 +1,24 @@
-from app import app
+# from app import app
 import urllib.request,json
 from .models import Source,Article
 
 
-#import API key
-api_key=app.config['API_KEY']
+api_key=None
 
 #import urls
-highlights_url=app.config['HEADLINES_API_URL']
-sources_url=app.config['SOURCE_API_URL']
-search_url=app.config['SEARCH_SOURCES']
+highlights_url=None
+sources_url=None
+search_url=None
+
+def configure_request(app):
+    global api_key,highlights_url,sources_url,search_url
+#import API key
+    api_key=app.config['API_KEY']
+
+    #import urls
+    highlights_url=app.config['HEADLINES_API_URL']
+    sources_url=app.config['SOURCE_API_URL']
+    search_url=app.config['SEARCH_SOURCES']
 
 def get_source():
     source_api_url=sources_url.format(api_key)
@@ -36,9 +45,9 @@ def process_results(source_list):
         description=sources.get('description')
         url=sources.get('url')
         
-
-        new_source=Source(id,name,description,url)
-        source_results.append(new_source)
+        if description:
+            new_source=Source(id,name,description,url)
+            source_results.append(new_source)
 
     return source_results
 
@@ -70,9 +79,9 @@ def process_article(articles_list):
         url=article.get('url')
         title=article.get('title')
         source=article.get('source')
-        
-        new_article=Article(id,name,urlToImage,description,title,url,publishedAt,source)
-        articles_data.append(new_article)
+        if description:
+            new_article=Article(id,name,urlToImage,description,title,url,publishedAt,source)
+            articles_data.append(new_article)
 
     return articles_data
 
