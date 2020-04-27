@@ -46,7 +46,7 @@ sudo easy_install pip
 
 - Now your ready to run the modules type the fillowing commands to run the app locally.
 ```
-python3.6 run.py
+python3.6 manage.py
 ```
 
 ## Contribution
