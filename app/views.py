@@ -22,13 +22,21 @@ def index():
 @app.route('/sports')
 def sources():
     sport=search_for_article('sports')
-    return render_template('sports.html',sports=sport)
+    search=request.args.get('search_name')
+    if search:
+        return redirect(url_for('search',article_name=search))
+    else:
+        return render_template('sports.html',sports=sport)
 
 
 @app.route('/business')
 def business():
     business=search_for_article('business')
-    return render_template('business.html',business=business)
+    search=request.args.get('search_name')
+    if search:
+        return redirect(url_for('search',article_name=search))
+    else:
+        return render_template('business.html',business=business)
 
 @app.route('/search/<article_name>')
 def search(article_name):
